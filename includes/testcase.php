@@ -12,7 +12,7 @@ class WP_UnitTestCase extends PHPUnit_Framework_TestCase {
 
 		global $wpdb;
 		$wpdb->suppress_errors = false;
-		$wpdb->show_errors = true;
+		$wpdb->show_errors = false;
 		$wpdb->db_connect();
 		ini_set('display_errors', 1 );
 		$this->factory = new WP_UnitTest_Factory;
